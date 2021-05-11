@@ -21,3 +21,7 @@ const Route = use('Route')
 Route.post('/sessions', 'SessionController.store')
 Route.post('/users', 'UserController.create')
 
+Route.resource('medicine', 'MedicineController')
+  .apiOnly()
+  .middleware('auth')
+
