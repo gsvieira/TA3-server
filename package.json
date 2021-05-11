@@ -27,9 +27,6 @@
     "@adonisjs/vow": "^1.0.17",
     "pg": "^8.6.0"
   },
-  "devDependencies": {
-    "sqlite3": "^5.0.2"
-  },
   "autoload": {
     "App": "./app"
   }

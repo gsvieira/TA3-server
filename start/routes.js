@@ -18,10 +18,12 @@ const UserController = require('../app/Controllers/Http/UserController')
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.post('/sessions', 'SessionController.store')
 Route.post('/users', 'UserController.create')
+Route.post('/sessions', 'SessionController.store')
 
 Route.resource('medicine', 'MedicineController')
   .apiOnly()
   .middleware('auth')
 
+Route.post('medicine/:id/images', 'ImageController.store').middleware('auth')
+Route.get('images/:path', 'ImageController.show')

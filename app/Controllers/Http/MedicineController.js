@@ -23,7 +23,7 @@ class MedicineController {
    * @param {View} ctx.view
    */
   async index ({ request, response, view }) {
-    const medicine = Medicine.all()
+    const medicine = Medicine.query().with('images').fetch()
 
     return medicine
   }
