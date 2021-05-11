@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Adonis directory for storing tmp files
+tmp
+
+# Environment variables, never commit this file
+.env
+
+# The development sqlite file
+database/*.sqlite
+
+# VisualStudioCode 
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# VisualStudioCode Patch 
+# Ignore all local history of files
+.history
+.ionide
